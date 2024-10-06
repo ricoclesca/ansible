@@ -1,0 +1,14 @@
+2024-10-06 20:07:11,921 p=15223 u=ec2-user n=ansible | 172.31.28.168 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-06 20:07:12,029 p=15223 u=ec2-user n=ansible | 172.31.24.24 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}

@@ -1,0 +1,9 @@
+ .bash_history
+.bash_logout
+.bash_profile
+.cache/
+.ssh/
+.bashrc
+.viminfo
+.vscode-server/
+ansible-key.pem

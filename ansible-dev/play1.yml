@@ -1,0 +1,51 @@
+---
+- hosts: all
+  become: True
+  ignore_errors: True
+  gather_facts: no  
+  #become_user: root
+
+  tasks:
+      - name: Create a file
+        file:
+          path: /tmp/playbookfile
+          mode: '0666'
+          state: touch
+        tags:
+          - file    
+
+      - name: Check something
+        command: akdjkja
+        tags:
+            - cmd
+
+      - name: Create a directory
+        file:
+          path: /tmp/dir
+          mode: '0666'
+          state: directory
+        tags:
+            - dir
+      - name: Create group
+        group:
+          name: security
+          state: present
+
+      - name: Create uses rico
+        user:
+          comment: Rico Admin
+          shell: /bin/bash
+          group: security
+          name: Rico
+
+      #ansible's run your command the way you want with "command and shell"
+      - name: Check uptime
+        command: uptime
+      - name: Check the date
+        shell: date
+      
+      #This isll not work in command. but will work in shell: 
+      # - name: Check  
+      #   command: cat /etc/passwd | grep
+      #   shell: cat /etc/passwd | grep
+
