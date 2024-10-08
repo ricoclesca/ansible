@@ -14,11 +14,6 @@
         tags:
           - file    
 
-      - name: Check something
-        command: akdjkja
-        tags:
-            - cmd
-
       - name: Create a directory
         file:
           path: /tmp/dir
@@ -44,7 +39,7 @@
       - name: Check the date
         shell: date
       
-      #This isll not work in command. but will work in shell: 
+      #This will not work in command. but will work in shell: 
       # - name: Check  
       #   command: cat /etc/passwd | grep
       #   shell: cat /etc/passwd | grep

@@ -1,0 +1,20 @@
+---
+- hosts: ws
+  become: true
+  ignore_errors: true
+  vars:
+    f_name: john
+
+  tasks:
+    - name: debug module
+      debug:
+        # msg: "hello form playbook2"
+        var: f_name
+
+        # Register a variable w/o the vars.
+    - name: uptime
+      command: uptime
+      register: uptime_output
+    - name: display output vairalbe
+      debug:
+        var: uptime_output.stdout_lines

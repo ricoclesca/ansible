@@ -1,0 +1,7 @@
+# install git 
+sudo yum install git -y
+mkdir /home/ec2-user/ansible-dev
+git clone https://github.com/kserge2001/w17-ansible.git
+mv w17-ansible/* /home/ec2-user/ansible-dev/
+rm -rf w17-ansible
+sudo chown -R ec2-user:ec2-user /home/ec2-user/ansible-dev

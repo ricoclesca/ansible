@@ -1,0 +1,39 @@
+---
+- hosts: all 
+  become: true
+  #true/false|1/2|yes/no.
+  # become_user: root
+  ignore_errors: yes
+  gather_facts: false
+
+  tasks:
+    - name: Create a file
+      file:
+        path: /tmp/playbookfile1
+        mode: '0666'
+        state: touch
+
+    - name: check somehting
+      command: kdkdks
+      
+      
+    - name: Create a directory
+      file:
+        path: /tmp/
+        mode: '0700'
+        state: directory
+    
+    - name: Create a group
+      group:
+        name: security
+        state: present
+
+    - name: Create user Ricardo
+      user:
+        name: Ricardo
+        comment: Ricardo Admin
+        uid: 1040
+        group: security
+        shell: /bin/bash
+      when: ansible_os_family == "Debian" or 
+        

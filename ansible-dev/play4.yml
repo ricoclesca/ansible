@@ -1,5 +1,5 @@
 ---
-- hosts: webservers
+- hosts: ws
   become: true
   ignore_errors: yes
   vars:

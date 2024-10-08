@@ -1,5 +1,5 @@
 ---
-- hosts: webservers
+- hosts: ws
   become: yes
   tasks:
       - name: Install required packages

@@ -1,0 +1,34 @@
+---
+- hosts: ws
+  become: 1
+  ignore_errors: yes
+  gather_facts: true
+  vars:
+    package_name: httpd
+
+  tasks:
+    - name: Install package
+      yum:
+        name: "{{package_name}}"
+        state: present
+
+    - name: Create groups
+      group:
+        state: present
+        name: "{{item}}"
+      loop:
+          - candy
+          - chocolate
+          - toffee
+          - coffee
+          - fruit
+          - milk
+    #       or
+    # - name: Create groups
+    #   group:
+    #     name: "{{items}}"
+    #     state: present
+    #   with_item:
+    #     - candy
+    #     - chocolate
+

@@ -12,3 +12,17 @@
     "changed": false,
     "ping": "pong"
 }
+2024-10-08 21:35:07,109 p=16129 u=ec2-user n=ansible | 172.31.28.168 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-10-08 21:35:07,115 p=16129 u=ec2-user n=ansible | 172.31.24.24 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}

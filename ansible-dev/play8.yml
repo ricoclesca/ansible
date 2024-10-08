@@ -1,0 +1,9 @@
+---
+- name: Download a file using get_url module
+  hosts: all
+  tasks:
+    - name: Download file from URL
+      get_url:
+        url: "http://example.com/file.zip"
+        dest: "/tmp/file.zip"
+        
